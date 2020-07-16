@@ -1,0 +1,1120 @@
+/*******************************************************************/
+/**                  +-+-+-+-+-+-+-+-+-+-+                        **/
+/**                  |  L P J  -  w s l  |                        **/
+/**                  +-+-+-+-+-+-+-+-+-+-+                        **/
+/**                                                               **/
+/**   p a r / p f t _ F O R K E L . p a r                         **/
+/*******************************************************************/
+
+#include "../include/pftpar.h" /* include constant definitions */
+
+#define CTON_LEAF 29
+#define CTON_ROOT 29
+#define CTON_POOL 29
+#define CTON_SO 29
+#define CTON_SAP 330
+
+10  /* number of pft's */
+11 /* number of cft's */
+
+/*--------------------------------------------------------------------------*/
+/* first pft */
+TROPICAL_BROADLEAVED_EVERGREEN_TREE
+"tropical broadleaved evergreen tree"
+TREE
+0.962                        /* rootdist[0] 1 */
+0.0                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+0.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.12                        /* resist 8*/
+2.0                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+1000                        /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+0.0                         /* gdd5min 30*/
+1000                        /* twmax 31*/
+0.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+7.                          /* emax 35*/
+0.02                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+EVERGREEN                   /* phenology */
+C3                          /* pathway */
+2.0 55.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+25 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+15.5 1000                   /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+1.01 8.30 0.20              /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+1.86 38.64 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+77.17 55.53 0.52            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+5.14 5.00 0.44              /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.6321 0.5174               /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+BROADLEAVED                 /* leaftype */
+2.0 20.0 2.0                /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15.0                        /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                                 /* fo3crit */
+0.045 0.35                        /* o3 a param low high*/
+0.1                         /* inund_height: max WTD tolerated (m) 37*/
+20.0                        /* max days of inundation tolerated 42*/
+25.0                        /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0                 /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+24.0                        /* Potential Isoprene Production Is (μg g−1h−1) */
+0.8                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.0                         /* Monoterpene storage (-) */
+/
+*--------------------------------------------------------------------------*/
+/* 2. pft */
+TROPICAL_BROADLEAVED_RAINGREEN_TREE
+"tropical broadleaved raingreen tree"
+TREE
+0.961                        /* rootdist[0] 1 */
+0.85                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+0.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.5                         /* resist 8*/
+0.65                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+1000                        /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+0.0                         /* gdd5min 30*/
+1000                        /* twmax 31*/
+0.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+7.0                         /* emax 35*/
+0.02                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+RAINGREEN                   /* phenology */
+C3                          /* pathway */
+2.0 55.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+25 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+15.5 1000                   /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.24 7.66 0.20              /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+1.63 38.64 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+23.00 13.01 0.20            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+7.97 22.21 0.13             /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.5153 0.7439                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+BROADLEAVED                 /* leaftype */
+1.0 20  1.0                 /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15                          /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                         /* fo3crit */
+0.058 0.25                  /* o3 a param low high*/
+0.1                         /* inund_height: max WTD tolerated (m) 37*/
+20.0                          /* max days of inundation tolerated 42*/
+25.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+45.0                        /* Potential Isoprene Production Is (μg g−1h−1) */
+2.4                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.0                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 3. pft */
+TEMPERATE_NEEDLELEAVED_EVERGREEN_TREE
+"temperate needleleaved evergreen tree"
+TREE
+0.976                        /* rootdist[0] 1 */
+0.00                        /* minwscal 3*/
+0.3                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.12                        /* resist 8*/
+4.0                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+1000                        /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+900.0                       /* gdd5min 30*/
+1000                        /* twmax 31*/
+0.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.02                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+EVERGREEN                   /* phenology */
+C3                          /* pathway */
+-4.0 42.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-2.0 22.0                   /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.22 -7.81 0.20             /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+1.83 35.26 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+20.00 4.87 0.20             /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+5.00 8.61 0.80              /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.4389 0.4744                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+NEEDLELEAVED                /* leaftype */
+4.0 20 4.0                  /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15                          /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                         /* fo3crit */
+0.01 0.05                   /* o3 a param low high*/
+0.25                          /* inund_height: max WTD tolerated (m) 37*/
+10.0                          /* max days of inundation tolerated 42*/
+20.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+8                           /* Potential Isoprene Production Is (μg g−1h−1) */
+4.8                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 4. pft */
+TEMPERATE_BROADLEAVED_EVERGREEN_TREE
+"temperate broadleaved evergreen tree"
+TREE
+0.964                        /* rootdist[0] 1 */
+0.00                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.5                         /* resist 8*/
+1.0                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+1000                        /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+1200.0                      /* gdd5min 30*/
+1000                        /* twmax 31*/
+0.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.02                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+EVERGREEN                   /* phenology */
+C3                          /* pathway */
+-4.0 42.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+3.0 18.8                    /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.55 -0.63 0.20             /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+0.98 41.12 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+18.83 39.32 0.20            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+5.00 8.82 0.80              /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.446 0.6967                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+BROADLEAVED                 /* leaftype */
+1.0 20 1.0                  /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15                          /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                         /* fo3crit */
+0.03 0.17                   /* o3 a param low high*/
+0.25                          /* inund_height: max WTD tolerated (m) 37*/
+10.0                          /* max days of inundation tolerated 42*/
+16.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+24                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.0                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 5. pft */
+TEMPERATE_BROADLEAVED_SUMMERGREEN_TREE
+"temperate broadleaved summergreen tree"
+TREE
+0.966                        /* rootdist[0] 1 */
+0.00                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+120                         /* nmax 7*/
+0.12                        /* resist 8*/
+0.5                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+300                         /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+1200.0                      /* gdd5min 30*/
+1000                        /* twmax 31*/
+0.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.02                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+SUMMERGREEN                 /* phenology */
+C3                          /* pathway */
+-4.0 38.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 25                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-17.0 15.5                  /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.26 13.69 0.20             /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+1.74 41.51 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+58.00 59.78 0.20            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+5.24 20.96 0.80             /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.61 0.6037                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+BROADLEAVED                 /* leaftype */
+1.0 20 1.0                  /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15                          /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                         /* fo3crit */
+0.015 0.1                   /* o3 a param low high*/
+0.25                          /* inund_height: max WTD tolerated (m) 37*/
+15.0                          /* max days of inundation tolerated 42*/
+22.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+45                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.0                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 6. pft */
+BOREAL_NEEDLELEAVED_EVERGREEN_TREE
+"boreal needleleaved evergreen tree"
+TREE
+0.943                        /* rootdist[0] 1 */
+0.00                        /* minwscal 3*/
+0.3                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.12                        /* resist 8*/
+4.0                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+1000                        /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+600                         /* gdd5min 30*/
+23                          /* twmax 31*/
+5.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.06                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+EVERGREEN                   /* phenology */
+C3                          /* pathway */
+-4.0 38.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+15 25                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-42 -1.0                    /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.10 -7.52 0.20             /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+0.24 27.32 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+14.00 3.04 0.20             /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+5.00 0.01 0.80              /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.3109 0.5567                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+NEEDLELEAVED                /* leaftype */
+4.0 20 4.0                  /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15                          /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                         /* fo3crit */
+0.014 0.05                  /* o3 a param low high*/
+0.3                         /* inund_height: max WTD tolerated (m) 37*/
+15.0                          /* max days of inundation tolerated 42*/
+18.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+8                           /* Potential Isoprene Production Is (μg g−1h−1) */
+4.8                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 7. pft */
+BOREAL_BROADLEAVED_SUMMERGREEN_TREE
+"boreal broadleaved summergreen tree"
+TREE
+0.943                        /* rootdist[0] 1 */
+0.00                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.12                        /* resist 8*/
+0.5                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+200                         /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+350                         /* gdd5min 30*/
+23                          /* twmax 31*/
+5.0                         /* gddbase (deg C) 33*/
+17                          /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.06                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+SUMMERGREEN                 /* phenology */
+C3                          /* pathway */
+-4.0 38.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+15 25                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-42 1.0                    /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.22 2.05 0.20              /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+1.74 41.51 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+58.00 59.78 0.20            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+5.24 20.96 0.80             /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.3614 0.7046               /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+BROADLEAVED                 /* leaftype */
+1.0 20 1.0                  /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15                          /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                         /* fo3crit */
+0.023 0.11          /* o3 a param low high*/
+0.25                          /* inund_height: max WTD tolerated (m) 37*/
+15.0                          /* max days of inundation tolerated 42*/
+16.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+45                          /* Potential Isoprene Production Is (μg g−1h−1) */
+4.8                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.0                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 8. pft */
+BOREAL_NEEDLELEAVED_SUMMERGREEN_TREE
+"boreal needleleaved summergreen tree"
+TREE
+0.943                        /* rootdist[0] 1 */
+0.00                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.12                        /* resist 8*/
+0.5                         /* sla 10*/
+1.0                         /* lmro_ratio 18*/
+200                        /* ramp 19*/
+1.500                       /* lai_sapl 21*/
+350                         /* gdd5min 30*/
+23                          /* twmax 31*/
+5.0                         /* gddbase (deg C) 33*/
+30                       /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.06                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+SUMMERGREEN                   /* phenology */
+C3                          /* pathway */
+-4.0 38.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+15 25                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-46 -5.4                    /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.15 -4.165 0.20             /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+0.24 44.6 0.20              /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+95.0 130.1 0.20             /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+5.00 2.344 0.80              /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.3431 0.4463                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+NEEDLELEAVED                /* leaftype */
+1.0 20 1.0                  /* turnover leaf  sapwood root 9 11 12*/
+CTON_LEAF CTON_SAP CTON_ROOT/* C:N mass ratio for leaf, sapwood, and root 13,14,15*/
+15                          /* crownarea_max 20*/
+1.2                         /* sapwood sapling 22*/
+1.6                         /* fo3crit */
+0.014 0.05                  /* o3 a param low high*/
+0.3                         /* inund_height: max WTD tolerated (m) 37*/
+15.0                          /* max days of inundation tolerated 42*/
+18.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+8                           /* Potential Isoprene Production Is (μg g−1h−1) */
+4.8                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 9. pft */
+C3_PERENNIAL_GRASS
+"C3 perennial grass"
+GRASS
+0.943                        /* rootdist[0] 1 */
+0.20                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.01                        /* resist 8*/
+0.5                         /* sla 10*/
+0.75                        /* lmro_ratio 18*/
+100                         /* ramp 19*/
+0.001                       /* lai_sapl 21*/
+960                         /* gdd5min 30*/
+1000                        /* twmax 31*/
+5.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+ANY                         /* phenology */
+C3                          /* pathway */
+-4.0 45.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+10 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-39 11                      /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.31 4.98 0.01              /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+0.24 32.04 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+23.00 75.94 0.22            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+0.52 53.07 0.01             /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.3183 0.50                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+1.0 2.0                     /* turnover leaf root 9 12*/
+CTON_LEAF CTON_ROOT         /* C:N mass ratio for leaf and root 13,15*/
+1.0                         /* fo3crit */
+0.4 10.0                    /* o3 a param low high*/
+0.3                           /* inund_height: max WTD tolerated (m) 37*/
+10.0                          /* max days of inundation tolerated 42*/
+2.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 10. pft */
+C3_POLAR_GRASS
+"C3 polar grass"
+GRASS
+0.943                        /* rootdist[0] 1 */
+0.20                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.01                        /* resist 8*/
+0.5                         /* sla 10*/
+0.75                        /* lmro_ratio 18*/
+100                         /* ramp 19*/
+0.001                       /* lai_sapl 21*/
+0.01                        /* gdd5min 30*/
+1000                        /* twmax 31*/
+5.0                         /* gddbase (deg C) 33*/
+17                       /* min_temprange 34*/
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+ANY                         /* phenology */
+C3                          /* pathway */
+-4.0 45.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+10 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 -2.6                      /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.13 2.79 0.20              /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+0.24 26.12 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+23.0 50.0 0.38            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+0.88 1.0 0.94             /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.4435 0.3543                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+1.0 2.0                     /* turnover leaf root 9 12*/
+CTON_LEAF CTON_ROOT         /* C:N mass ratio for leaf and root 13,15*/
+1.0                         /* fo3crit */
+0.4 10.0                    /* o3 a param low high*/
+0.3                           /* inund_height: max WTD tolerated (m) 37*/
+10.0                          /* max days of inundation tolerated 42*/
+2.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+8                           /* Potential Isoprene Production Is (μg g−1h−1) */
+2.4                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 11. pft */
+C4_PERENNIAL_GRASS
+"C4 perennial grass"
+GRASS
+0.972                        /* rootdist[0] 1 */
+0.20                        /* minwscal 3*/
+0.5                         /* gmin 4*/
+0.2                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.01                        /* resist 8*/
+0.5                         /* sla 10*/
+0.75                        /* lmro_ratio 18*/
+100                         /* ramp 19*/
+0.001                       /* lai_sapl 21*/
+6500                           /* gdd5min 30*/
+1000                        /* twmax 31*/
+5.0                         /* gddbase (deg C) 33*/
+-1000                       /* min_temprange 34*/
+7.0                         /* emax 35*/
+0.01                        /* intc 36*/
+0.5                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+ANY                         /* phenology */
+C4                          /* pathway */
+6.0 55.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 45                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+7.0 1000.0                 /* lower and upper coldest monthly mean temperature(deg C) 28 29*/
+0.91 6.42 0.20              /* forkel phenology -- cold  limiting fn: slope, base, tau parameters */
+1.47 29.16 0.20             /* forkel phenology -- heat  limiting fn: slope, base, tau parameters */
+64.23 69.90 0.40            /* forkel phenology -- light limiting fn: slope, base, tau parameters */
+0.10 41.72 0.17             /* forkel phenology -- water limiting fn: slope, base, tau parameters */
+0.4002 0.51                   /* forkel phenology -- alpha-a and k_beer (light extinction coefficient); replaces default values of 0.5 and 0.5 */
+1.0 2.0                     /* turnover leaf root 9 12*/
+CTON_LEAF CTON_ROOT         /* C:N mass ratio for leaf and root 13,15*/
+1.0                         /* fo3crit */
+0.68 10.0                   /* o3 a param low high*/
+0.25                          /* inund_height: max WTD tolerated (m) 37*/
+15.0                          /* max days of inundation tolerated 42*/
+2.0                          /* Bulk density (kg biom./m3) from SPITFIRE v1 - what the BD for dead sphagnum is 43*/
+0               /* Peatland PFT (0 not a peatland PFT;1 peatland PFT ) 44*/
+/*---------------------------------------------------------------------------*/
+/* 1. cft */
+TEMPERATE_CEREALS
+"temperate cereals"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.0001                      /* lai_sapl 21                       not used, computed internally*/ 
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+0.0                         /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+0.0 40.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+12 17                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+TEMP_WTYP_CALC_SDATE        /* calc_sdate: method to calculate the sowing date */
+270 90                      /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+210                         /* hlimit: max length of crop cycle  */
+60                          /* fallow_days: wait after harvest until next sowing */
+12 5 12                     /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+12                          /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+8                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+20                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+1700.0 2876.9               /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999		                    /* phu parameter for determining the variability of phu */
+0.0 0.0                     /* min & max basetemp: base temperature */
+0.05                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.05                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.45                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.7                         /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+7.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+2.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.50                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.20                        /* himin: minimum harvest index HI reached at harvest*/                             
+2.0		                      /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 2. cft */
+RICE
+"rice"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+10.0                        /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+6.0 55.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 45                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+MULTICROP                   /* ????calc_sdate: method to calculate the sowing date */
+120 200                     /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+60                          /* fallow_days: wait after harvest until next sowing */
+1000 18 1000                /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+10                          /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+24                          /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+0                           /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+1600 1800                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+10.0 10.0                   /* min & max basetemp: base temperature */
+0.30                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.01                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.70                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.80                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+5.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.50                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.25                        /* himin: minimum harvest index HI reached at harvest*/
+2.0                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 3. cft */
+MAIZE
+"maize"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+6.0                         /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C4                          /* pathway */
+8.0 42.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+21 26                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+TEMP_PREC_CALC_SDATE        /*calc_sdate: method to calculate the sowing date*/
+1 181                       /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 14 1000                /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+6                           /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+1600.0 1600.0               /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+5.0 15.0                    /* min & max basetemp: base temperature */
+0.10                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.05                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.75                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+7.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+4.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.50                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.30                        /* himin: minimum harvest index HI reached at harvest*/
+2.0                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+8                          /* Potential Isoprene Production Is (μg g−1h−1) */
+2.4                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 4. cft */
+TROPICAL_CEREALS
+"tropical cereals"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+10.0                        /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+6.0 55.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 45                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+PREC_CALC_SDATE	            /* calc_sdate: method to calculate the sowing date*/ 
+80 260                      /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 1000 1000              /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+10                          /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+1500 1500                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+10.0 10.0                   /* min & max basetemp: base temperature */
+0.15                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.01                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.85                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+2.5                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+2.5                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.25                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.10                        /* himin: minimum harvest index HI reached at harvest*/
+2.0                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 5. cft */
+PULSES
+"pulses"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+3.0                         /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+-4.0 45.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+10 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+NO_CALC_SDATE              	/* calc_sdate: method to calculate the sowing date*/
+100 280                     /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 1000 1000              /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+3                           /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+2000 2000                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+3.0 3.0                     /* min & max basetemp: base temperature */
+0.15                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.02                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.90                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+4.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.60                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.01                        /* himin: minimum harvest index HI reached at harvest*/
+2.0                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 6. cft */
+TEMPERATE_ROOTS
+"temperate roots"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+3.0                         /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+-4.0 45.0                   /* lower and upper temperature limit for co2 (deg C) 24 27*/
+10 30                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+NO_CALC_SDATE               /* calc_sdate: method to calculate the sowing date*/
+90 270                      /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 1000 1000              /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+3                           /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+2700 2700                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+3.0 3.0                     /* min & max basetemp: base temperature */
+0.15                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.05                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.75                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.75                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+6.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+2.00                        /* hiopt: optimum harvest index HI reached at harvest*/
+1.10                        /* himin: minimum harvest index HI reached at harvest*/
+0.5                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 7. cft */
+TROPICAL_ROOTS
+"tropical roots"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+15.0                        /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+6.0 55.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 45                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+PREC_CALC_SDATE	            /* calc_sdate: method to calculate the sowing date */
+80 260                      /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 1000 1000              /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+15                          /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+2000 2000                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+20.0 20.0                   /* min & max basetemp: base temperature */
+0.15                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.05                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.75                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.75                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+6.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+2.00                        /* hiopt: optimum harvest index HI reached at harvest*/
+1.10                        /* himin: minimum harvest index HI reached at harvest*/
+0.5                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 8. cft */
+OIL_CROPS_SUNFLOWER
+"oil crops sunflower"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+6.0                         /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+8.0 42.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+25 32                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+TEMP_STYP_CALC_SDATE        /* calc_sdate: method to calculate the sowing date */
+1 181                       /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 13 1000                /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+6                           /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+1300 2000                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+2460                        /* phu parameter for determining the variability of phu */
+6.0 6.0                     /* min & max basetemp: base temperature */
+0.15                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.01                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.70                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+4.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.30                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.20                        /* himin: minimum harvest index HI reached at harvest*/
+2.0                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 9. cft */
+OIL_CROPS_SOYBEAN
+"oil crops soybean"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+10.0                        /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+5.0 45.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+28 32                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+NO_CALC_SDATE               /* calc_sdate: method to calculate the sowing date */
+140 320                     /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 1000 1000              /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+10                          /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+1000 1000                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+10.0 10.0                   /* min & max basetemp: base temperature */
+0.15                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.01                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.60                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+4.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.30                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.01                        /* himin: minimum harvest index HI reached at harvest*/
+0.5                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+8                          /* Potential Isoprene Production Is (μg g−1h−1) */
+2.4                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 10. cft */
+OIL_CROPS_GROUNDNUT
+"oil crops groundnut"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+14.0                        /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+6.0 55.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+20 45                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) 28 29 */
+PREC_CALC_SDATE	            /* calc_sdate: method to calculate the sowing date */
+100 280                     /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+180                         /* hlimit: max length of crop cycle  */
+360                         /* fallow_days: wait after harvest until next sowing */
+1000 1000 1000              /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+14                          /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+0                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+24                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+1500 1500                   /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+14.0 14.0                   /* min & max basetemp: base temperature */
+0.15                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.01                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.75                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+4.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.40                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.30                        /* himin: minimum harvest index HI reached at harvest*/
+0.5                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/
+/* 11. cft */
+OIL_CROPS_RAPESEED
+"oil crops rapeseed"
+CROP
+0.8                         /* rootdist[0] 1 */
+0.3                         /* minwscal 3*/
+0.5                         /* gmin 4*/
+1.0                         /* respcoeff 5*/
+100                         /* nmax 7                            value of 8. PFT*/
+0.5                         /* resist 8*/
+0.5                         /* sla 10*/  
+1.5                         /* lmro_ratio 18*/
+500                         /* ramp 19*/
+0.001                       /* lai_sapl 21                       not used, computed internally*/
+0.0                         /* gdd5min 30 */
+1000                        /* twmax 31                          value of 8. PFT*/
+0.0                         /* gddbase (deg C) 33 */
+-1000                       /* min_temprange 34 */
+5.0                         /* emax 35*/
+0.01                        /* intc 36*/
+1.0                         /* alphaa, fraction of PAR assimilated at ecosystem level, relative to leaf level */
+CROPGREEN                   /* phenology */
+C3                          /* pathway */
+0.0 40.0                    /* lower and upper temperature limit for co2 (deg C) 24 27*/
+12 17                       /* lower and upper limit of temperature optimum for photosynthesis(deg C) 25 26*/
+-1000 1000                  /* lower and upper coldest monthly mean temperature(deg C) */
+TEMP_WTYP_CALC_SDATE        /* calc_sdate: method to calculate the sowing date */
+241 61                      /* sdatenh,sdatesh: init sowing date for northern and southern hemisphere (julian day) */
+210                         /* hlimit: max length of crop cycle  */
+0                           /* fallow_days: wait after harvest until next sowing */
+17 5 12                     /* temp_fall, temp_spring, temp_vernalization: thresholds for sowing date f(T)*/
+12                          /* trg: temperature under which vernalization is possible (deg C)*/
+0                           /* pvd: number of vernalising days required*/
+1.0                         /* psens: sensitivity to the photoperiod effect [0-1](1 means no sensitivity)*/
+8                           /* pb: basal photoperiod (h)(pb<ps for longer days plants)*/
+20                          /* ps: saturating photoperiod (h) (ps<pb for shorter days plants)*/
+2100.0 3279.7               /* min & max phu: potential heat units required for plant maturity (deg C)*/
+9999                        /* phu parameter for determining the variability of phu */
+0.0 0.0                     /* min & max basetemp: base temperature */
+0.05                        /* fphuc: fraction of growing season 1 [0-1]*/
+0.01                        /* flaimaxc: fraction of plant maximal LAI 1 [0-1]*/
+0.50                        /* fphuk: fraction of growing season 2 [0-1]*/
+0.95                        /* flaimaxk: fraction of plant maximal LAI 2 [0-1]*/
+0.85                        /* fphusen: fraction of growing period at which LAI starts decreasing [0-1]*/
+0.00                        /* flaimaxharvest: fraction of plant maximal LAI still present at harvest [0-1]*/
+6.0                         /* laimax: plant maximal LAI (m2leaf/m2)*/
+3.0                         /* laimin: plant maximal LAI (m2leaf/m2) in 1950*/
+0.30                        /* hiopt: optimum harvest index HI reached at harvest*/
+0.15                        /* himin: minimum harvest index HI reached at harvest*/
+2.0                         /* shapesenescencenorm */
+CTON_ROOT CTON_SO CTON_POOL /* C:N mass ratio for root, storage organ, and pool */
+16                          /* Potential Isoprene Production Is (μg g−1h−1) */
+1.6                         /* Potential Monoterpene Production (μg g−1h−1) */
+0.5                         /* Monoterpene storage (-) */
+/*--------------------------------------------------------------------------*/

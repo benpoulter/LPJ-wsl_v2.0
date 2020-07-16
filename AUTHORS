@@ -1,0 +1,27 @@
+/**************************************************************************/
+/**  Development History and Contributions                               **/
+/**  ------------------------------------------------------------------  **/
+/**  LPJ Original Fortran/C++ version:                                   **/
+/**    Stephen Sitch      Potsdam Institute for Climate Impact Research  **/
+/**    Ben Smith          Lund University                                **/
+/**                                                                      **/
+/**    Sitch S., B. Smith, I.C. Prentice, A. Arneth, A. Bondeau,         **/
+/**      W. Cramer, J.O. Kaplan, S. Levis, S. Lucht, M.T. Sykes,         **/
+/**      K. Thonicke, and S. Venevsky. Global Change Biology (2003)      **/
+/**                                                                      **/
+/**  LPJ C version, derived from LPJ Fortran/C++ version:                **/
+/**    Werner von Bloh    Potsdam Institute for Climate Impact Research  **/
+/**    Sibyll Schaphoff   Potsdam Institute for Climate Impact Research  **/
+/**                                                                      **/
+/**  LPJmL version                                                       **/
+/**    Bondeau A., P.C. Smith, S. Zaehle, S. Schaphoff, W. Lucht,        **/
+/**      W. Cramer, D. Gerten, H. Lotze-Campen, C. Muller,               **/
+/**      M. Reichstein, and B. Smith. Global Change Biology (2007)       **/
+/**                                                                      **/
+/**  LPJ-wsl v2.0, C version modified by developers:                     **/
+/**    Benjamin Poulter   NASA Goddard Space Flight Center               **/
+/**    Zhen Zhang         University of Maryland                         **/
+/**    Leonardo Calle     University of Montana                          **/
+/**************************************************************************/
+
+
