@@ -322,12 +322,12 @@ Bool getlanduse_NET_ncdf(Landuse *landuse,int year, int ncell,int ncft, Real lat
         for(i=0;i<landuse->nbands;i++)
           if(landuse->landfrac[i+(cell*landuse->nbands)]>(0.0+sum)){
             landuse->landfrac[i+(cell*landuse->nbands)]-=sum;
-           sum=0.0;
+            sum=0.0;
             break;
-         }
+          }else{
+            fail("cropfraction greater 1: %f cell: %d, managed grass is 0\n",sum+1,cell);
+          }
       }
-    }else{
-      fail("cropfraction greater 1: %f cell: %d, managed grass is 0\n",sum+1,cell);
     }
   }
 
