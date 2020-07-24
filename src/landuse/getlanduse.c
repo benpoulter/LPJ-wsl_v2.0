@@ -56,9 +56,11 @@ Bool getlanduse(Landuse *landuse, int year, int ngridcell,int ncft)
             landuse->landfrac[i+(cell*landuse->nbands)]-=sum;
             sum=0.0;
             break;
+          }else{
+            fail("cropfraction greater 1: %f cell: %d, managed grass is 0\n",sum+1,cell);
           }
       }
-    }else fail("cropfraction greater 1: %f cell: %d, managed grass is 0\n",sum+1,cell); 
+    }
   }
 
   free(vec);
