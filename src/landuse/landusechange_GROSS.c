@@ -152,7 +152,7 @@ void harvest_GROSS(Cell *cell,int cellid, Real difffrac, Real harvest_biomass, c
     newSecforestStand->fire_sum=primaryStand->fire_sum;
     copysoil(primaryStand, newSecforestStand);
     foreachpft(pft, p, primaryStand->pftlist){
-      if( copy_pft(pft, newSecforestStand, pftpar, npft) <=0){
+      if( copy_pft(pft, newSecforestStand, pftpar, npft) < 0){
         fail("something went wrong in copy_pft in ./src/landuse/landusechange_GROSS.c");}
     }
 
